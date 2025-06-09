@@ -1,0 +1,136 @@
+
+/* Hero */
+.hero-section {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.hero-container {
+  text-align: center;
+  max-width: 900px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  transition: color 0.4s ease-in-out;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
+
+.hero-buttons .btn {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #ff6f61;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #e85c50;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: white;
+  color: #2c5364;
+}
+
+
+/* About Section */
+.about-section {
+  background-color: #fff;
+}
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.about-text ul {
+  list-style: none;
+  margin-top: 20px;
+}
+
+.about-text li {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.about-text span {
+  font-weight: bold;
+  color: #007bff;
+  font-size: 1.8rem;
+}
+
+.about-img img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-flex {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+.hero-content h1 {
+  font-size: 3rem;
+  transition: color 0.5s ease-in-out;
+}

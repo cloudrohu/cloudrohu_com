@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Smart_Scheduler</title>
+  <link rel="stylesheet" href="{% static 'main/css/smart_scheduler.css' %}" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    canvas {
+      background: #f3f4f6;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+  <div class="max-w-4xl mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-2 text-center">📅 SmartCalendar Pro</h1>
+
+    <!-- Live Clock -->
+    <div
+      class="text-center text-lg font-semibold mb-4 text-blue-700"
+    >
+      ⏰ <span id="liveClock"></span>
+    </div>
+
+    <!-- Month & Year -->
+    <div class="flex items-center justify-between mb-2">
+      <h2 id="currentMonth" class="text-xl font-bold"></h2>
+      <div class="space-x-2">
+        <button
+          onclick="prevMonth()"
+          class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+        >
+          ←
+        </button>
+        <button
+          onclick="nextMonth()"
+          class="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+        >
+          →
+        </button>
+      </div>
+    </div>
+
+    <!-- Weekdays -->
+    <div
+      class="grid grid-cols-7 gap-2 text-center font-semibold text-gray-600 mb-2"
+    >
+      <div>Sun</div>
+      <div>Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+    </div>
+
+    <!-- Calendar Grid -->
+    <div id="calendar" class="grid grid-cols-7 gap-2 mb-6">
+      <!-- JS will inject calendar days -->
+    </div>
+
+    <!-- Add Event Button -->
+    <div class="text-center">
+      <button
+        onclick="openModal()"
+        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+      >
+        ➕ Add Event
+      </button>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    id="eventModal"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50"
+  >
+    <div class="bg-white rounded-xl p-6 w-full max-w-md relative">
+      <button
+        onclick="closeModal()"
+        class="absolute top-2 right-3 text-gray-500 hover:text-red-600 text-xl"
+      >
+        &times;
+      </button>
+      <h2 class="text-xl font-semibold mb-4">Add New Event</h2>
+      <form id="eventForm" class="space-y-3">
+        <input
+          type="text"
+          placeholder="Event Title"
+          required
+          class="w-full border p-2 rounded"
+          id="title"
+        />
+        <textarea
+          placeholder="Description"
+          class="w-full border p-2 rounded"
+          id="desc"
+        ></textarea>
+        <input
+          type="date"
+          required
+          class="w-full border p-2 rounded"
+          id="date"
+        />
+        <input
+          type="time"
+          required
+          class="w-full border p-2 rounded"
+          id="time"
+        />
+
+        <!-- Multiple Emails -->
+        <input
+          type="text"
+          placeholder="Emails (comma separated)"
+          required
+          class="w-full border p-2 rounded"
+          id="emails"
+        />
+        <small class="text-gray-500 text-sm"
+          >Example: renuka@122.com, renuka@165.com</small
+        >
+
+        <!-- Reminder Options Toggle -->
+        <div>
+          <button
+            type="button"
+            onclick="toggleReminder()"
+            class="text-sm text-blue-600"
+          >
+            ⏰ Reminder Settings
+          </button>
+          <div id="reminderOptions" class="hidden mt-2">
+            <label class="block text-sm">Remind me before (minutes):</label>
+            <input
+              type="number"
+              id="reminderTime"
+              min="1"
+              max="1440"
+              value="15"
+              class="w-full border p-2 rounded"
+            />
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 w-full"
+        >
+          Save Event
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="{% static 'main/js/smart_scheduler.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="{% static '' %}main/css/cv_maker.css">
+    <title>CV_Maker</title>
+</head>
+<body class="bg-gray-100 p-4">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-lg">
+    <div class="flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-center w-full">CV Maker</h1>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4 mt-6">
+      <div>
+        <label class="block font-semibold">Full Name</label>
+        <input id="name" class="w-full border p-2 rounded" placeholder="Renuka Sharma" />
+      </div>
+      <div>
+        <label class="block font-semibold">Job Title</label>
+        <input id="title" class="w-full border p-2 rounded" placeholder="Frontend Developer" />
+      </div>
+
+      <div>
+        <label class="block font-semibold">Email</label>
+        <input id="email" class="w-full border p-2 rounded" placeholder="renuka@example.com" />
+      </div>
+      <div>
+        <label class="block font-semibold">Phone</label>
+        <input id="phone" class="w-full border p-2 rounded" placeholder="+91-9876543210" />
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Summary</label>
+        <textarea id="summary" class="w-full border p-2 rounded" placeholder="A passionate developer..."></textarea>
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Skills</label>
+        <input id="skills" class="w-full border p-2 rounded" placeholder="HTML, CSS, Tailwind, React, Django..." />
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Experience</label>
+        <textarea id="experience" class="w-full border p-2 rounded" placeholder="Your work experience..."></textarea>
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Education</label>
+        <textarea id="education" class="w-full border p-2 rounded" placeholder="Your education details..."></textarea>
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Languages Known</label>
+        <input id="languages" class="w-full border p-2 rounded" placeholder="English, Hindi, Korean" />
+      </div>
+
+      <div class="col-span-2">
+        <label class="block font-semibold">Profile Image (Optional)</label>
+        <input type="file" id="profileImage" class="mt-1" />
+      </div>
+    </div>
+
+    <div class="flex gap-4 mt-6 justify-center">
+      <button onclick="generateCV()" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Generate CV</button>
+      <button onclick="downloadPDF()" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Download PDF</button>
+    </div>
+
+    <div id="cvResult" class="mt-10 bg-white border p-6 rounded shadow hidden"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <script src="{% static '' %}main/js/cv_maker.js"></script>
+</body>
+</html>

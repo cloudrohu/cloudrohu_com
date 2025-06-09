@@ -1,0 +1,40 @@
+{% extends 'main/base/homebase.html' %}
+
+{% block content %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Custom Color Picker</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body-color>
+  <div class="output-bar">
+    <div class="color-swatch" id="colorPreview"></div>
+    <div class="color-info">
+      <span class="label">HEX</span>
+      <span class="value" id="hexValue">#000000</span>
+    </div>
+    <div class="color-info">
+      <span class="label">RGB</span>
+      <span class="value" id="rgbValue">0, 0, 0</span>
+    </div>
+    <div class="color-info">
+      <span class="label">HSL</span>
+      <span class="value" id="hslValue">0°, 0%, 0%</span>
+    </div>
+  </div>
+
+  <div class="color-picker">
+    <h1>🎨Color Picker</h1>
+    <canvas id="colorWheel" width="300" height="300"></canvas>
+    <canvas id="saturation" width="300" height="30"></canvas>
+  </div>
+
+  <script src="script.js"></script>
+</body-color>
+</html>
+
+{% endblock content %}

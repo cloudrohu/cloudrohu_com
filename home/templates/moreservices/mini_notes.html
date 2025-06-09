@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '' %}main/css/mini_notes.css">
+    <title>Note_Pad</title>
+</head>
+<body>
+  <header>
+    <div class="dropdown">
+      <button id="fileBtn">File ⌄</button>
+      <div class="dropdown-content">
+        <button onclick="newFile()">New</button>
+        <button onclick="document.getElementById('fileInput').click()">Open</button>
+        <button onclick="saveFile()">Save As</button>
+        <input type="file" id="fileInput" style="display:none" accept=".txt" onchange="openFile(event)">
+        <button onclick="exportPDF()">Export PDF</button>
+        <button onclick="printNote()">Print</button>
+      </div>
+    </div>
+    
+    <select id="fontSelect" onchange="changeFont()">
+      <option value="monospace">Monospace</option>
+      <option value="sans-serif">Sans-serif</option>
+      <option value="serif">Serif</option>
+    </select>
+
+    <button onclick="toggleTheme()">🌙</button>
+    <button onclick="toggleMarkdown()">📄</button>
+    <button onclick="startSpeech()">🎤</button>
+    <button onclick="encryptNote()">🔐</button>
+  </header>
+
+  <main>
+    <textarea id="notepad" placeholder="Start typing..."></textarea>
+    <div id="preview" style="display:none;"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/4.3.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
+
+    <script src="{% static '' %}main/js/mini_notes.js"></script>
+</body>
+</html>

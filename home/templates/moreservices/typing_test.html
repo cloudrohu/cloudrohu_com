@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '' %}main/css/typing_test.css">
+    <title>Typing Test</title>
+</head>
+<body>
+    
+
+ <h1>🎧 Your's Typing Test</h1>
+
+  <div id="timer">⏳ Timer: 60 seconds</div>
+  <div id="text">Click Start to begin...</div>
+  <div id="mode">
+    <label><input type="radio" name="mode" value="text" checked> ✍️ Text Mode</label>
+    <label><input type="radio" name="mode" value="voice"> 🎧 Voice Mode</label>
+    <label><input type="checkbox" id="voiceToggle"> 🎤 Use Voice Typing</label>
+  </div>
+  <textarea id="input" placeholder="Type what you hear or see..." disabled></textarea><br>
+  <button id="start">Start Test</button>
+  <div id="result"></div>
+  <div id="history">
+    <h3>📅 Score History</h3>
+    <table border="1">
+      <thead>
+        <tr><th>WPM</th><th>Accuracy</th><th>Date</th></tr>
+      </thead>
+      <tbody id="historyBody"></tbody>
+    </table>
+  </div>
+
+
+<audio id="typeSound" src="https://assets.mixkit.co/sfx/preview/mixkit-typewriter-click-1121.mp3"></audio>
+<script src="{% static '' %}main/js/typing_test.js"></script>
+</body>
+</html>

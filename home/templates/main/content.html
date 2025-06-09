@@ -1,0 +1,312 @@
+{% load static %}
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '' %}main/css/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+<!-- HERO SECTION -->
+<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;">
+  <div>
+    <h1>Professional Business Solutions</h1>
+    <p>Helping you grow with innovative and tailored strategies for success.</p>
+    <a href="#contact" class="btn">Contact Us</a>
+  </div>
+</section>
+
+<!--HERO END-->
+
+<!--ABOUT-->
+<section id="about" class="about-section">
+  <div class="container">
+    <div class="about-wrapper">
+      <div class="about-content">
+        <h2>About Findexor</h2>
+        <p>
+          Findexor is a trusted financial advisory firm with over 15 years of experience.
+        </p>
+        <div id="more-text" class="hidden">
+          <p>We help businesses secure funding, optimize investments, and strategize growth plans that deliver real results. Our expert team has empowered 200+ companies with personalized financial blueprints and proven success strategies.</p>
+    
+        </div> 
+        <a href="/about_us/" class="read-more-btn">Read More</a>
+
+      </div>
+      <div class="about-image">
+        <img src="https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg" alt="Business Fund Advisor" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--ABOUT END-->
+
+<!--SERVICES -->
+
+<section class="services-section" id="services">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="section-subtitle">Empowering your business with smart financial tools and expertise</p>
+
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>Business Funding Consultation</h3>
+        <p>Expert advice tailored to help you secure funding for your startup or scaling business.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Investment Planning</h3>
+        <p>Smart strategies to grow your assets and build long-term financial stability.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Risk Management</h3>
+        <p>Customized risk assessment and mitigation plans to protect your business growth.</p>
+      </div>
+
+      <div class="service-box">
+        <h3>Cash Flow Optimization</h3>
+        <p>We analyze, track, and optimize your cash flow for operational efficiency and scalability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--SERVICES END-->
+
+
+<!--OUR TEAM-->
+<section id="team" class="team-section">
+  <div class="container">
+    <h2 class="section-title">Meet Our Expert Team</h2>
+    <p class="section-subtitle">Dedicated professionals driving your business growth</p>
+
+    <div class="team-grid">
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg" alt="Rajesh Kumar" />
+        </div>
+        <div class="member-info">
+          <h3>Rajesh Kumar</h3>
+          <p class="position">Founder & Chief Advisor</p>
+          <p class="bio">With 20+ years of experience, Rajesh leads financial strategy and business consulting for startups and enterprises.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'main/images/team2.jpg' %}" alt="Anita Sharma" />
+        </div>
+        <div class="member-info">
+          <h3>Anita Sharma</h3>
+          <p class="position">Senior Investment Analyst</p>
+          <p class="bio">Anita specializes in market analysis and risk management, ensuring smart investment decisions for our clients.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'main/images/team3.jpg' %}" alt="Vikram Singh" />
+        </div>
+        <div class="member-info">
+          <h3>Vikram Singh</h3>
+          <p class="position">Business Development Manager</p>
+          <p class="bio">Vikram connects businesses with funding opportunities and strategic partnerships worldwide.</p>
+        </div>
+      </div>
+
+      <div class="team-member">
+        <div class="member-photo">
+          <img src="{% static 'main/images/team4.jpg' %}" alt="Priya Mehta" />
+        </div>
+        <div class="member-info">
+          <h3>Priya Mehta</h3>
+          <p class="position">Client Relations Lead</p>
+          <p class="bio">Priya ensures seamless communication and tailored solutions for every client’s unique needs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--OUR TEAM END-->
+
+<!-- WHO WE WORK FOR -->
+<section id="clients" class="clients-section">
+  <div class="container">
+    <h2 class="section-title">Who We Work For</h2>
+    <p class="section-subtitle">Helping diverse industries achieve financial success</p>
+
+    <div class="clients-grid">
+      <div class="client-card">
+        <i class="fas fa-hospital fa-4x client-icon"></i>
+        <h3>Hospitals</h3>
+        <p>Financial solutions tailored for healthcare providers.</p>
+      </div>
+
+      <div class="client-card">
+        <i class="fas fa-clinic-medical fa-4x client-icon"></i>
+        <h3>Clinics</h3>
+        <p>Supporting clinics with strategic investment planning.</p>
+      </div>
+
+      <div class="client-card">
+        <i class="fas fa-building fa-4x client-icon"></i>
+        <h3>Real Estate</h3>
+        <p>Optimizing funding for property development & sales.</p>
+      </div>
+
+      <div class="client-card">
+        <i class="fas fa-couch fa-4x client-icon"></i>
+        <h3>Furniture</h3>
+        <p>Helping manufacturers and sellers grow their business.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- WHO WE WORK FOR END -->
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="testimonials-section">
+  <div class="container">
+    <h2 class="section-title">What Our Clients Say</h2>
+    
+    <div class="testimonials-wrapper">
+      <div class="testimonial-card">
+        <img src="https://m.media-amazon.com/images/I/616iBhe2roL._AC_SY145_.jpg" alt="Client 1" class="client-photo" />
+        <p class="testimonial-text">"Findexor helped us secure funding quickly and efficiently. Their expert advice made a real difference to our business growth."</p>
+        <h4 class="client-name">Rahul Sharma</h4>
+        <span class="client-position">Founder, MedCare Hospital</span>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="{% static 'main/images/client2.jpg' %}" alt="Client 2" class="client-photo" />
+        <p class="testimonial-text">"Professional, trustworthy, and knowledgeable. The Findexor team guided us every step of the way."</p>
+        <h4 class="client-name">Anjali Mehta</h4>
+        <span class="client-position">CEO, RealEstate Plus</span>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="{% static 'main/images/client3.jpg' %}" alt="Client 3" class="client-photo" />
+        <p class="testimonial-text">"Thanks to Findexor, our furniture business was able to expand with the right investment strategies."</p>
+        <h4 class="client-name">Vikram Patel</h4>
+        <span class="client-position">Owner, HomeStyle Furnitures</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- TESTIMONIALS END -->
+
+
+<!-- CONTACT SECTION -->
+<section id="contact" style="padding: 60px 20px; background: #f5f9fc;">
+  <div class="container" style="max-width: 1100px; margin: 0 auto;">
+    <h2 style="text-align:center; color:#0077b6; margin-bottom: 40px; font-weight:700;">Contact Us</h2>
+
+    <div class="contact-info" style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; margin-bottom: 50px;">
+      <div class="info-box" style="background:#fff; flex: 1 1 300px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 3px 8px rgb(0 0 0 / 0.1); display:flex; align-items:center; gap: 20px; transition: transform 0.3s ease;">
+        <i class="fas fa-map-marker-alt" style="font-size:2.5rem; color:#0077b6; flex-shrink:0;"></i>
+        <div>
+          <h3 style="margin:0 0 5px; font-weight:600;">Address</h3>
+          <p>123 Finance Street, Mumbai, India</p>
+        </div>
+      </div>
+      <div class="info-box" style="background:#fff; flex: 1 1 300px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 3px 8px rgb(0 0 0 / 0.1); display:flex; align-items:center; gap: 20px; transition: transform 0.3s ease;">
+        <i class="fas fa-phone-alt" style="font-size:2.5rem; color:#0077b6; flex-shrink:0;"></i>
+        <div>
+          <h3 style="margin:0 0 5px; font-weight:600;">Phone</h3>
+          <p>+91 98765 43210</p>
+        </div>
+      </div>
+      <div class="info-box" style="background:#fff; flex: 1 1 300px; padding: 25px 30px; border-radius: 10px; box-shadow: 0 3px 8px rgb(0 0 0 / 0.1); display:flex; align-items:center; gap: 20px; transition: transform 0.3s ease;">
+        <i class="fas fa-envelope" style="font-size:2.5rem; color:#0077b6; flex-shrink:0;"></i>
+        <div>
+          <h3 style="margin:0 0 5px; font-weight:600;">Email</h3>
+          <p>contact@findexor.com</p>
+        </div>
+      </div>
+    </div>
+
+    <form id="contactForm" class="contact-form" style="background:#fff; padding:30px 35px; border-radius:12px; box-shadow: 0 3px 10px rgb(0 0 0 / 0.1); max-width:700px; margin:0 auto 50px;">
+      <label for="name" style="display:block; margin-bottom:6px; font-weight:600; color:#023047;">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required style="width:100%; padding:12px 15px; margin-bottom:18px; border-radius:6px; border:1.8px solid #90e0ef; font-size:1rem; font-family: inherit;"/>
+
+      <label for="email" style="display:block; margin-bottom:6px; font-weight:600; color:#023047;">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required style="width:100%; padding:12px 15px; margin-bottom:18px; border-radius:6px; border:1.8px solid #90e0ef; font-size:1rem; font-family: inherit;"/>
+
+
+      <label for="phone" style="display:block; margin-bottom:6px; font-weight:600; color:#023047;">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required pattern="[0-9]{10}" style="width:100%; padding:12px 15px; margin-bottom:18px; border-radius:6px; border:1.8px solid #90e0ef; font-size:1rem;" />
+      
+
+      <label for="message" style="display:block; margin-bottom:6px; font-weight:600; color:#023047;">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here  ..." required style="width:100%; padding:12px 15px; margin-bottom:18px; border-radius:6px; border:1.8px solid #90e0ef; font-size:1rem; font-family: inherit; min-height:120px; resize: vertical;"></textarea>
+
+     
+
+      
+     
+
+      <button type="submit" style="background:#0077b6; color:#fff; border:none; padding:15px 25px; border-radius:8px; font-size:1.1rem; cursor:pointer; font-weight:700; transition: background-color 0.3s ease;">Send Message</button>
+    </form>
+
+    <div class="map-container" style="max-width:1100px; margin: 0 auto; border-radius:15px; overflow:hidden; box-shadow: 0 4px 15px rgb(0 0 0 / 0.15); height: 400px;">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.869251470976!2d72.83542641485139!3d19.076090186667677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce9c5aee7853%3A0x87bd175fd4c08a21!2sFinance%20Street%2C%20Mumbai%2C%20Maharashtra%20400001!5e0!3m2!1sen!2sin!4v1616597582590!5m2!1sen!2sin"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        style="width:100%; height:100%; border:0;"
+      ></iframe>
+    </div>
+  </div>
+
+ 
+</section>
+<!-- CONTACT SECTION END -->
+
+
+<!-- FOOTER -->
+<footer style="background:#023047; color:#ffffff; padding: 35px 20px;">
+  <div class="container" style="max-width:1100px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px;">
+    <div class="footer-about" style="flex:1 1 250px; min-width: 250px;">
+      <h3 style="font-weight:700; margin-bottom: 15px;">Findexor</h3>
+      <p style="line-height:1.6;">Your trusted partner in business funding and financial advisory, dedicated to helping you grow.</p>
+    </div>
+    <div class="footer-links" style="flex:1 1 200px; min-width: 200px;">
+      <h4 style="font-weight:600; margin-bottom: 15px;">Quick Links</h4>
+      <ul style="list-style:none; padding:0; margin:0;">
+        <li><a href="#about" style="color:#90e0ef; text-decoration:none;">About</a></li>
+        <li><a href="#services" style="color:#90e0ef; text-decoration:none;">Services</a></li>
+        <li><a href="#team" style="color:#90e0ef; text-decoration:none;">Our Team</a></li>
+        <li><a href="#contact" style="color:#90e0ef; text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-contact" style="flex:1 1 250px; min-width: 250px;">
+      <h4 style="font-weight:600; margin-bottom: 15px;">Contact Info</h4>
+      <p><i class="fas fa-map-marker-alt" style="margin-right:8px;"></i>123 Finance Street, Mumbai, India</p>
+      <p><i class="fas fa-phone-alt" style="margin-right:8px;"></i>+91 98765 43210</p>
+      <p><i class="fas fa-envelope" style="margin-right:8px;"></i>contact@findexor.com</p>
+    </div>
+  </div>
+  <div style="text-align:center; margin-top: 30px; font-size: 0.9rem; color:#90e0ef;">
+    &copy; 2025 Findexor. All rights reserved.
+  </div>
+</footer>
+<!-- FOOTER END -->
+
+
+
+<script src="{% static '' %}main/js/script.js"></script>
+
+</body>
+</html>
+
+{% endblock %}

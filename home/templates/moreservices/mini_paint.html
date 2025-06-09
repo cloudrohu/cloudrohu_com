@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="{% static '' %}main/css/mini_paint.css">
+<title>Mini_Paint</title>
+</head>
+<body>
+
+<div class="app">
+    <aside class="sidebar">
+      <h2>Tools</h2>
+
+      <label for="brushType">Brush Type</label>
+      <select id="brushType">
+        <option value="pencil">Pencil</option>
+        <option value="marker">Marker</option>
+        <option value="highlighter">Highlighter</option>
+        <option value="brush">Brush</option>
+        <option value="eraser">Eraser</option> 
+      </select>
+
+      <label for="shapeType">Shapes</label>
+      <select id="shapeType">
+        <option value="">-- No Shape --</option>
+        <option value="rectangle">Rectangle</option>
+        <option value="square">Square</option>
+        <option value="circle">Circle</option>
+        <option value="line">Line</option>
+        <option value="roundedRect">Rounded Rectangle</option>
+      </select>
+
+      <label for="brushSize">Size</label>
+      <input type="range" id="brushSize" min="1" max="50" value="5" />
+
+      <label for="colorPicker">Color</label>
+      <input type="color" id="colorPicker" value="#000000" />
+
+      <button id="undoBtn">Undo</button>
+      <button id="redoBtn">Redo</button>
+      <button id="clearBtn">Clear</button>
+
+      <label for="uploadImage">Image Import</label>
+      <input type="file" id="uploadImage" accept="image/*" />
+
+      <button id="saveBtn">Save</button>
+      <button id="saveAsBtn">Save As</button>
+    </aside>
+
+    <main>
+      <canvas id="paintCanvas" width="1024" height="700"></canvas>
+      <audio id="drawSound" src="click.mp3" preload="auto"></audio>
+    </main>
+  </div>
+
+
+<script src="{% static '' %}main/js/mini_paint.js"></script>
+</body>
+</html>
