@@ -4,19 +4,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <a href="/" class="logo-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+  <img src="{% static 'main/images/bg_remove_logo.png' %}" alt="" style="height: 40px;" />
+</a>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <title>QR Code Generator</title>
   <link rel="stylesheet" href="{% static '' %}main/css/qr-style.css">
 </head>
 <body>
-  <div class="container">
-    <h1>QR Code Generator</h1>
-    <input type="text" id="urlInput" placeholder="Enter URL here" />
-    <button id="generateBtn">Generate QR Code</button>
-    <div id="qrContainer"></div>
-    <a id="downloadLink" download="qrcode.png" style="display: none;">Download QR Code</a>
+
+
+  <h1>QR Code Generator</h1>
+  <input id="text" type="text" placeholder="Enter URL or text here" />
+  <div>
+    <button id="generateBtn">Generate QR</button>
+    <button id="downloadBtn" disabled>Download QR</button>
   </div>
+  <div id="qrcode"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script src="{% static '' %}main/js/qr-script.js"></script>
