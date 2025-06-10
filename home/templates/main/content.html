@@ -6,20 +6,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Add this in the <head> section of your HTML file -->
+  <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="{% static '' %}main/css/style.css">
     <title>Document</title>
 </head>
 <body>
 
 <!-- HERO SECTION -->
-<section class="hero" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-    url('http://127.0.0.1:8000/static/main/images/logo.jpg') no-repeat center center/cover;">
-  <div>
-    <h1>Professional Business Solutions</h1>
-    <p>Helping you grow with innovative and tailored strategies for success.</p>
-    <a href="#contact" class="btn">Contact Us</a>
+<div class="relative w-full h-screen overflow-hidden">
+  <!-- Slide 1 -->
+  <div class="absolute inset-0 slide bg-cover bg-center flex items-center justify-start h-[80vh] px-10 text-white"
+       style="background-image: url('https://media.istockphoto.com/id/2174290115/photo/cloud-computing-artificial-intelligence-data-center-multi-cloud-hybrid-cloud-information.jpg?s=2048x2048&w=is&k=20&c=u0eIQxKQVaL8wlCJxfvuO-3Z2qJGeLr8ofKRYMGZ5jk='); animation-delay: 0s;">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Empowering Business Growth</h1>
+      <p class="text-lg md:text-xl mb-6">Scale smarter with strategic insights and innovation.</p>
+      <a href="#contact" class="bg-white text-black px-6 py-3 rounded-md font-semibold">Contact Us</a>
+    </div>
   </div>
-</section>
+
+  <!-- Slide 2 -->
+<div class="absolute inset-0 slide bg-cover bg-center flex items-center justify-start h-[80vh] px-10 text-white"
+       style="background-image: url('https://cdn.pixabay.com/photo/2017/05/04/16/37/meeting-2284501_1280.jpg'); animation-delay: 5s;">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Digital Transformation</h1>
+      <p class="text-lg md:text-xl mb-6">Futuristic cloud-powered business tools.</p>
+      <a href="#services" class="bg-white text-black px-6 py-3 rounded-md font-semibold">Explore More</a>
+    </div>
+  </div>
+
+  <!-- Slide 3 -->
+<div class="absolute inset-0 slide bg-cover bg-center flex items-center justify-start h-[80vh] px-10 text-white"
+       style="background-image: url('https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_1280.jpg'); animation-delay: 10s;">
+    <div>
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">Client Partnerships</h1>
+      <p class="text-lg md:text-xl mb-6">Together we grow and achieve long-term success.</p>
+      <a href="#about" class="bg-white text-black px-6 py-3 rounded-md font-semibold">Our Journey</a>
+    </div>
+  </div>
+</div>
+
+<!-- Carousel End -->
+
 
 <!--HERO END-->
 
@@ -304,6 +334,28 @@
 
 
 
+<script>
+  const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  function showSlide(i) {
+    slides.forEach((slide, idx) => {
+      slide.style.display = (idx === i) ? 'flex' : 'none';
+    });
+  }
+
+  document.getElementById('prevBtn').addEventListener('click', () => {
+    index = (index - 1 + slides.length) % slides.length;
+    showSlide(index);
+  });
+
+  document.getElementById('nextBtn').addEventListener('click', () => {
+    index = (index + 1) % slides.length;
+    showSlide(index);
+  });
+
+  showSlide(index);
+</script>
 <script src="{% static '' %}main/js/script.js"></script>
 
 </body>

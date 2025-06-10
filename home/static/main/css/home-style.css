@@ -23,12 +23,13 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 0;
+  padding: 5px 0;
 }
 .logo {
   font-size: 1.8rem;
   font-weight: bold;
   color: #002244;
+  height: 80px;
 }
 .nav-links {
   list-style: none;
