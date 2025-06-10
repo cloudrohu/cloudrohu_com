@@ -1,0 +1,132 @@
+/* ==== Reset & Base Styles ==== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  color: #333;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==== Header ==== */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: #eaeaea;
+  gap: 10px;
+}
+
+header .dropdown,
+header select,
+header button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  font-size: 1rem;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* ==== Main ==== */
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+
+textarea#notepad,
+#preview {
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  resize: none;
+}
+
+textarea#notepad {
+  font-family: monospace;
+}
+
+#preview {
+  white-space: pre-wrap;
+  overflow-y: auto;
+  font-family: sans-serif;
+  display: none;
+}
+
+/* ==== Responsive ==== */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main {
+    flex-direction: column;
+  }
+  #preview {
+    height: auto;
+    max-height: 50vh;
+  }
+  textarea#notepad {
+    height: auto;
+    min-height: 50vh;
+  }
+}
+
+/* ==== Dark Theme ==== */
+body.dark {
+  background: #1e1e1e;
+  color: #fff;
+}
+body.dark header {
+  background: #333;
+}
+body.dark textarea,
+body.dark #preview {
+  background: #1e1e1e;
+  color: #fff;
+}
+
+/* ==== Buttons ==== */
+header button {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: #ddd;
+}
+
+/* ==== Font Dropdown ==== */
+#fontSelect {
+  border-radius: 6px;
+  padding: 4px;
+}
+
+/* ==== Hide File Input ==== */
+input[type="file"] {
+  display: none;
+}

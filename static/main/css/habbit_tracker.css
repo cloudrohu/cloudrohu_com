@@ -1,0 +1,167 @@
+/* Container padding */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; padding: 10px;
+  background-color: #f5f7fa;
+  color: #222;
+}
+
+.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+/* Responsive Table Container */
+#habits-list {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+#habits-list table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px; /* minimum width for desktop */
+}
+
+#habits-list th, #habits-list td {
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+#habits-list th {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.dark #habits-list th {
+  background-color: #333a56;
+}
+
+.category {
+  font-style: italic;
+  color: #555;
+}
+
+.streak {
+  font-weight: bold;
+  color: #2c7;
+}
+
+.action-btn button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #4a90e2;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 13px;
+  transition: background-color 0.3s ease;
+}
+
+.action-btn button:hover {
+  background-color: #357ABD;
+}
+
+.action-btn button:active {
+  transform: scale(0.95);
+}
+
+/* Controls area */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.controls > * {
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+
+/* Buttons */
+button#add-btn, button#export-btn, #dark-toggle {
+  flex: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  font-weight: 600;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#add-btn:disabled {
+  background-color: #9bbde6;
+  cursor: not-allowed;
+}
+
+button#add-btn:hover:not(:disabled),
+button#export-btn:hover,
+#dark-toggle:hover {
+  background-color: #357ABD;
+}
+
+/* Responsive text input and select */
+input[type=text], select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Chart Container */
+#chart-container {
+  margin-top: 25px;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* Quote style */
+#quote {
+  font-style: italic;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Small screen tweaks */
+@media (max-width: 768px) {
+  #habits-list th, #habits-list td {
+    font-size: 12px;
+    padding: 6px 6px;
+  }
+  .action-btn button {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .controls {
+    flex-direction: column;
+  }
+}
+
+/* Extra small screens (phones) */
+@media (max-width: 480px) {
+  #habits-list table {
+    min-width: 100%; /* Allow full width */
+  }
+  #habits-list th:nth-child(n+4), 
+  #habits-list td:nth-child(n+4) {
+    white-space: normal;
+    font-size: 11px;
+  }
+  /* Make checkboxes bigger for touch */
+  input[type=checkbox] {
+    width: 22px;
+    height: 22px;
+  }
+}
