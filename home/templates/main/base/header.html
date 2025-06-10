@@ -14,22 +14,42 @@
  </head>
  <body>
   
-<!--NAVBAR -->
-  
 <header class="navbar fixed-top" style="background-color: #fff;">
   <div class="container nav-container">
-    <div class="logo" >
+    <div class="logo">
       <img src="{% static '' %}main/images/cloud_rohu_bg.png" style="height: 80px;" alt="Cloud Rohu" />
     </div>
     <nav>
-      <ul class="nav-links" id="nav-links" >
+      <ul class="nav-links" id="nav-links">
         <li><a href="#">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#team">Our Team</a></li>
         <li><a href="#clients">We Work For</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#testimonials">Our Clients</a></li>
+
+
+        
+       
+
         <li><a href="#contact">Contact</a></li>
+
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle">Services Utiity</a>
+          <ul class="dropdown-menu">
+            <li><a href="#team"></a></li>
+            <li><a href="{% url "colorcode" %}">Color Code</a></li>
+            <li><a href="{% url "qr-generator" %}">Qr Generator</a></li>
+            <li><a href="{% url "calculator" %}">Calculator</a></li>
+            <li><a href="{% url "expense_tracker" %}">Expense Tracker</a></li>
+            <li><a href="{% url "cv_maker" %}">CV Maker</a></li>
+            <li><a href="{% url "note_pad" %}">Note Pad</a></li>
+
+
+          </ul>
+        </li>
+
       </ul>
       <div class="hamburger" id="hamburger">
         <span></span><span></span><span></span>
@@ -38,7 +58,6 @@
   </div>
 </header>
 
-<!--NAVBAR END-->
 
 
   <script src="{% static '' %}main/js/navbar.js"></script>

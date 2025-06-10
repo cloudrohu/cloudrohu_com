@@ -4,7 +4,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 const qrcodeDiv = document.getElementById('qrcode');
 
 // Apna logo image path yahan daalo (static file URL)
-const logoPath = 'http://127.0.0.1:8000/static/main/images/logo.png';
+const logoPath = 'https://cloudrohu.com/static/main/images/logo.png';
 
 let canvas;
 

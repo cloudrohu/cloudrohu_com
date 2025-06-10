@@ -29,7 +29,7 @@ urlpatterns = [
     path('habbit_trackers/', views.HABBIT_TRACKER, name='habbit_tracker'),
     path('language_learning/', views.LANQUAGE, name='language_learning'),
     path('mini_paint/', views.MINI_PAINT, name='mini_paint'),
-    path('calender/', views.Calender, name='Calender'),
+    path('calender/', views.Calender, name='calender'),
     path('aI-powered-drawing/', views.AI_DRAWING, name='aI-powered-drawing'),
 
 
