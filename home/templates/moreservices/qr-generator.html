@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
   <a href="/" class="logo-link" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-  <img src="{% static 'main/images/bg_remove_logo.png' %}" alt="" style="height: 40px;" />
+  <img src="{% static 'main/images/logo.png' %}" alt="" style="height: 40px;" />
 </a>
 
   <meta charset="UTF-8" />
@@ -23,9 +23,10 @@
   <input id="text" type="text" placeholder="Enter URL or text here" />
   <div>
     <button id="generateBtn">Generate QR</button>
-    <button id="downloadBtn" disabled>Download QR</button>
   </div>
   <div id="qrcode"></div>
+  <br>
+    <button id="downloadBtn" disabled>Download QR</button>
 
   <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
   <script src="{% static '' %}main/js/qr-script.js"></script>

@@ -4,7 +4,7 @@ const downloadBtn = document.getElementById('downloadBtn');
 const qrcodeDiv = document.getElementById('qrcode');
 
 // Apna logo image path yahan daalo (static file URL)
-const logoPath = 'http://127.0.0.1:8000/static/main/images/bg_remove%20logo.png';
+const logoPath = 'http://127.0.0.1:8000/static/main/images/logo.png';
 
 let canvas;
 
@@ -51,9 +51,9 @@ function addLogoToCanvas() {
     const y = (canvas.height - size) / 2;
 
     // White rounded square background for logo
-    const radius = 20;
+    const radius = 50;
     ctx.fillStyle = 'white';
-    roundRect(ctx, x - 10, y - 10, size + 20, size + 20, radius);
+    roundRect(ctx, x - 1, y - 1, size + 1, size + 1, radius);
     ctx.fill();
 
     // Logo draw karo
